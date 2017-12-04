@@ -1,0 +1,26 @@
+<html ng-app="app">
+<head>
+<script src="https://code.angularjs.org/1.5.5/angular.js"></script>
+
+<script src="js/CommentController.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<title>part 3</title>
+</head>
+<body ng-controller="CommentCtrl" class="container">
+ 
+ <div ng-hide="isLogin">
+ 	<a href="login.html">Login</a>
+ </div>
+<div ng-show="isLogin">
+		Comments
+		<ul>
+			<li ng-repeat="c in comments">{{c}}</li>
+			
+		</ul>
+		
+		<input ng-model="comment"   class="form-controll">
+		<button class="btn btn-info" ng-click="add()">Add</Button>
+</div> 
+</body>
+</html>
+

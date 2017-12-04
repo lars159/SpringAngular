@@ -1,0 +1,18 @@
+<html ng-app="app"> 
+	<body ng-controller="CommentController">
+		
+		<div ng-repeat="t in traffic">
+			<h2>{{t.subcategory}} {{t.title}} </h2>
+			<ul>
+				<li ng-repeat="c in comments"> {{c}} </li>
+			</ul>	 
+				<input type="text" ng-model="c">		
+				<button type="submit" ng-click="save(c)">Save</button>
+			 
+		</div>
+	<script src="https://code.angularjs.org/1.5.5/angular.js"></script>
+	 <script src="https://code.angularjs.org/1.5.5/angular-resource.js"></script>
+	 <script src="CommentController.js"></script>
+	</body>
+
+</html>
