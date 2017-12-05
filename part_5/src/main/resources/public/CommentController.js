@@ -1,7 +1,7 @@
-var app = angular.module('app');
+var app = angular.module('app', ['ngResource']);
 
   
-app.controller('CommentController', function($scope , $http) {
+app.controller('CommentController', function($scope , $resource, $http) {
       
 	var commentResource = $resource('/api/comment/:commentId', {commentId:'@id'});
     

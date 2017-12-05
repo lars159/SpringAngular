@@ -1,8 +1,9 @@
-## PART 4 
-In this part you will learn how to use external api and styling your application.
+## PART 3
+In this part we going to extend our rest server with login server. 
 
-### Assignment
-1. Use extrnal and from server  traffic api to populate traffic
-2. Use the api to add comments to each traffic.
-3. (Optional) Use http://getbootstrap.com/css/ and add some more nice css classes 
-4. add Unittest
+### Assignment 
+1. Add login on Server.
+2. Add comments check that you are logged in
+3. Add @Secured"ROLE_USER"/"ROLE_ADMIN" 
+5. (Optional) Create unitest
+
