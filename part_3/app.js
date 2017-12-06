@@ -1,7 +1,17 @@
-var app=angular.module("IntroApp", []);
+var app = angular.module('todoApp', [])
 
-app.controller("IntroCtrl", function(){
-    console.log("Init Ctrl");
+app.controller('TodoListController', function($scope) {
+ 
+    $scope.todos = [
+      {text:'learn AngularJS' },
+      {text:'build an AngularJS app' }];
+ 
+    $scope.addTodo = function() {
+      var t ={text:$scope.todoText };
+  
+  
     
-});
-    
+      $scope.todoText = '';
+    };
+ 
+  });

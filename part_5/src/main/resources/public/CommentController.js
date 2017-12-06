@@ -7,13 +7,10 @@ app.controller('CommentController', function($scope , $resource, $http) {
     
     $scope.comments = commentResource.query();
     
-    $scope.save = function (){
-        commentResource.save({name : $scope.text})
+    $scope.save = function (t){
+        commentResource.save({name : $scope.myComment, trafficId : t.id})
     }
     
-    $scope.update = function (){
-        user.$save();
-    }
     
   
     $http.get("http://api.sr.se/api/v2/traffic/messages?format=json").then(function(response) {

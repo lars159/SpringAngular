@@ -19,7 +19,7 @@ public class CommentController {
 
 
 	@RequestMapping(method=RequestMethod.POST) 
-    public void add(@RequestBody String comment) {
+    public void add(String comment, String date) {
         commentService.add(comment);
     }
 
